@@ -15,6 +15,14 @@
 		E0BE669E2ADC5847001A4534 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE669D2ADC5847001A4534 /* TodoTests.swift */; };
 		E0BE66A82ADC5847001A4534 /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66A72ADC5847001A4534 /* TodoUITests.swift */; };
 		E0BE66AA2ADC5847001A4534 /* TodoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66A92ADC5847001A4534 /* TodoUITestsLaunchTests.swift */; };
+		E0BE66BB2ADD6D09001A4534 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66BA2ADD6D09001A4534 /* ContentViewModel.swift */; };
+		E0BE66BD2ADD8641001A4534 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66BC2ADD8641001A4534 /* Context.swift */; };
+		E0BE66BF2ADD86F1001A4534 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66BE2ADD86F1001A4534 /* User.swift */; };
+		E0BE66C12ADD87D7001A4534 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66C02ADD87D7001A4534 /* Group.swift */; };
+		E0BE66C42ADD8937001A4534 /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66C32ADD8937001A4534 /* ItemController.swift */; };
+		E0BE66C62ADD897C001A4534 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66C52ADD897C001A4534 /* UserController.swift */; };
+		E0BE66C82ADD898E001A4534 /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66C72ADD898E001A4534 /* GroupController.swift */; };
+		E0BE66CA2ADDAC48001A4534 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66C92ADDAC48001A4534 /* AppViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +56,14 @@
 		E0BE66A32ADC5847001A4534 /* TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0BE66A72ADC5847001A4534 /* TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITests.swift; sourceTree = "<group>"; };
 		E0BE66A92ADC5847001A4534 /* TodoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E0BE66BA2ADD6D09001A4534 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		E0BE66BC2ADD8641001A4534 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		E0BE66BE2ADD86F1001A4534 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E0BE66C02ADD87D7001A4534 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		E0BE66C32ADD8937001A4534 /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
+		E0BE66C52ADD897C001A4534 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		E0BE66C72ADD898E001A4534 /* GroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
+		E0BE66C92ADDAC48001A4534 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +114,11 @@
 		E0BE66872ADC5845001A4534 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
-				E0BE66882ADC5845001A4534 /* TodoApp.swift */,
-				E0BE668A2ADC5845001A4534 /* ContentView.swift */,
-				E0BE668C2ADC5845001A4534 /* Item.swift */,
-				E0BE668E2ADC5847001A4534 /* Assets.xcassets */,
-				E0BE66902ADC5847001A4534 /* Todo.entitlements */,
-				E0BE66942ADC5847001A4534 /* Info.plist */,
+				E0BE66B72ADD6C4D001A4534 /* Models */,
+				E0BE66B92ADD6C7A001A4534 /* App */,
+				E0BE66B82ADD6C59001A4534 /* Views */,
+				E0BE66C22ADD88D3001A4534 /* ModelControllers */,
+				E0BE66B62ADD6C3F001A4534 /* ViewModels */,
 				E0BE66912ADC5847001A4534 /* Preview Content */,
 			);
 			path = Todo;
@@ -132,6 +147,55 @@
 				E0BE66A92ADC5847001A4534 /* TodoUITestsLaunchTests.swift */,
 			);
 			path = TodoUITests;
+			sourceTree = "<group>";
+		};
+		E0BE66B62ADD6C3F001A4534 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0BE66BA2ADD6D09001A4534 /* ContentViewModel.swift */,
+				E0BE66C92ADDAC48001A4534 /* AppViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E0BE66B72ADD6C4D001A4534 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0BE668C2ADC5845001A4534 /* Item.swift */,
+				E0BE66BC2ADD8641001A4534 /* Context.swift */,
+				E0BE66BE2ADD86F1001A4534 /* User.swift */,
+				E0BE66C02ADD87D7001A4534 /* Group.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E0BE66B82ADD6C59001A4534 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0BE668A2ADC5845001A4534 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E0BE66B92ADD6C7A001A4534 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E0BE66882ADC5845001A4534 /* TodoApp.swift */,
+				E0BE66902ADC5847001A4534 /* Todo.entitlements */,
+				E0BE66942ADC5847001A4534 /* Info.plist */,
+				E0BE668E2ADC5847001A4534 /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E0BE66C22ADD88D3001A4534 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0BE66C32ADD8937001A4534 /* ItemController.swift */,
+				E0BE66C52ADD897C001A4534 /* UserController.swift */,
+				E0BE66C72ADD898E001A4534 /* GroupController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +328,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0BE66C62ADD897C001A4534 /* UserController.swift in Sources */,
+				E0BE66C12ADD87D7001A4534 /* Group.swift in Sources */,
+				E0BE66BB2ADD6D09001A4534 /* ContentViewModel.swift in Sources */,
+				E0BE66C82ADD898E001A4534 /* GroupController.swift in Sources */,
+				E0BE66C42ADD8937001A4534 /* ItemController.swift in Sources */,
 				E0BE668B2ADC5845001A4534 /* ContentView.swift in Sources */,
+				E0BE66BF2ADD86F1001A4534 /* User.swift in Sources */,
 				E0BE668D2ADC5845001A4534 /* Item.swift in Sources */,
+				E0BE66CA2ADDAC48001A4534 /* AppViewModel.swift in Sources */,
+				E0BE66BD2ADD8641001A4534 /* Context.swift in Sources */,
 				E0BE66892ADC5845001A4534 /* TodoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,7 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Todo/Todo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Todo/App/Todo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Todo/Preview Content\"";
@@ -430,7 +502,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Todo/Info.plist;
+				INFOPLIST_FILE = Todo/App/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -461,7 +533,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Todo/Todo.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Todo/App/Todo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Todo/Preview Content\"";
@@ -469,7 +541,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Todo/Info.plist;
+				INFOPLIST_FILE = Todo/App/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
