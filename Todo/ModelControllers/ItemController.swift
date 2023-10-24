@@ -54,7 +54,7 @@ import SwiftData
          }
      }
 
-    func add(timestamp: Date, user: User, group: Group)
+     func add(timestamp: Date, user: User = UserController.currentUser, group: Group)
     {
         let newItem = Item(timestamp: timestamp, user: user, group: group)
         modelContext.insert(newItem)
