@@ -15,6 +15,7 @@ import SwiftUI
     {
         private(set) var itemController: ItemController
         @Published private(set) var currentUser: User?
+        @Published private(set) var currentGroup: Group?
         @Published private(set) var items: [Item]
 
         init(itemController: ItemController, userController: UserController)
@@ -22,6 +23,7 @@ import SwiftUI
             self.itemController = itemController
             self.items = itemController.items
             self.currentUser = userController.currentUser
+            self.currentGroup = userController.currentGroup
         }
 
         public func sddItem()
