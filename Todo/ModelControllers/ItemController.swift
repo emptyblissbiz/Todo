@@ -1,23 +1,29 @@
-//
-//  ItemController.swift
-//  Todo
-//
-//  Created by Joshua Sharp on 10/16/23.
-//
+    //
+    //  ItemController.swift
+    //  Todo
+    //
+    //  Created by Joshua Sharp on 10/16/23.
+    //
 import Foundation
 import Combine
 import SwiftData
+import SwiftUI
 
 @MainActor
- class ItemController: ObservableObject
+class ItemController: ObservableObject
 {
     var modelContainer: ModelContainer
-     var modelContext: ModelContext
-     var userController: UserController
+    var modelContext: ModelContext
+    @ObservedObject var userController: UserController
+    private var currentUser: User?
+    private var currentGroup: Group?
 
     @Published  var items: [Item] = [Item]()
 
-     init(inMemory: Bool = false, userController: UserController)  throws {
+    init(inMemory: Bool = false, userController: UserController) throws {
+        self.userController = userController
+        self.currentUser = userController.currentUser
+        self.currentGroup = userController.currentGroup
         do
         {
             let schema = Schema([
@@ -26,7 +32,6 @@ import SwiftData
             let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: inMemory)
             modelContainer =  try ModelContainer(for: schema, configurations: [modelConfiguration])
             modelContext = modelContainer.mainContext
-            self.userController = userController
             try  fetchData()
         }
         catch
@@ -47,17 +52,20 @@ import SwiftData
     }
 
 
-      func deleteItems(offsets: IndexSet) {
-         for index in offsets
-         {
+    func deleteItems(offsets: IndexSet) {
+        for index in offsets
+        {
             modelContext.delete(items[index])
-         }
-     }
+        }
+    }
 
-     func add(timestamp: Date, user: User = UserController.currentUser, group: Group)
+    func add(timestamp: Date = Date(), user: User? = nil, group: Group? = nil) -> UUID?
     {
+        guard let user = user ?? currentUser,
+              let group = group ?? currentGroup else { return nil }
         let newItem = Item(timestamp: timestamp, user: user, group: group)
         modelContext.insert(newItem)
+        return newItem.id
     }
 
     func delete(item: Item)

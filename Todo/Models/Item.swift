@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 final class Item {
+    let id: UUID = UUID()
     var created: Date
     var updated: Date
     var userOwner: User

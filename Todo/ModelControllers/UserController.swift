@@ -13,8 +13,8 @@ class UserController: ObservableObject
     var modelContainer: ModelContainer
     @Published var currentGroups: [Group]? = nil
     @Published var loggedin: Bool = false
-    @Published var currentUser: User?
     @Published var currentGroup: Group?
+    @Published var currentUser: User?
     {
         didSet
         {
@@ -27,7 +27,7 @@ class UserController: ObservableObject
     }
 
 
-    init(inMemory: Bool = false)  throws
+    init(inMemory: Bool = false) throws
     {
         let schema = Schema([
             User.self,

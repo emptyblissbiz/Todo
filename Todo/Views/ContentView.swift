@@ -1,22 +1,25 @@
-//
-//  ContentView.swift
-//  Todo
-//
-//  Created by Joshua Sharp on 10/15/23.
-//
+    //
+    //  ContentView.swift
+    //  Todo
+    //
+    //  Created by Joshua Sharp on 10/15/23.
+    //
 
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
-    @State private var viewModel: ContentViewModel
+struct ContentView: View 
+{
+    @ObservedObject private var viewModel: ContentViewModel
     init(viewModel: ContentViewModel) {
         self.viewModel = viewModel
     }
-
-    var body: some View {
-        NavigationSplitView {
-            List 
+    
+    var body: some View
+    {
+        NavigationSplitView
+        {
+            List
             {
                 ForEach(viewModel.items) { item in
                     NavigationLink {
@@ -27,33 +30,19 @@ struct ContentView: View {
                 }
                 .onDelete(perform:  viewModel.deleteItems)
             }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
-            .toolbar
-            {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing)
-                {
-                    EditButton()
-                }
-#endif
-                ToolbarItem
-                {
-                    Button(action: viewModel.addItem)
-                    {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
+            
         } detail:
         {
             Text("Select an item")
         }
+#if os(macOS)
+        .navigationSplitViewColumnWidth(min: 180, ideal: 200)
+#endif
     }
+
 }
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
-}
+    //#Preview {
+    //    ContentView()
+    //        .modelContainer(for: Item.self, inMemory: true)
+    //}

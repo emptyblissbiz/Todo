@@ -8,20 +8,23 @@
 import Combine
 import SwiftData
 
-//    @MainActor
+    @MainActor
     final class AppViewModel: ObservableObject
     {
         @Published var itemController: ItemController
         @Published var userController: UserController
         var contentViewModel: ContentViewModel
 
-        init() async throws
+        init() throws
         {
             do
             {
-                userController = try await UserController()
-                itemController = try await ItemController(userController: userController)
-                contentViewModel = await ContentViewModel(itemController: itemController, userController: userController)
+                var uc = try UserController()
+                self.userController = uc
+                var ic = try ItemController(userController: uc)
+                self.itemController = ic
+                var cvm = ContentViewModel(itemController: ic, userController: uc)
+                contentViewModel = cvm
             }
             catch
             {

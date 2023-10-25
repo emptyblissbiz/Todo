@@ -23,6 +23,7 @@
 		E0BE66C62ADD897C001A4534 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66C52ADD897C001A4534 /* UserController.swift */; };
 		E0BE66C82ADD898E001A4534 /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66C72ADD898E001A4534 /* GroupController.swift */; };
 		E0BE66CA2ADDAC48001A4534 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE66C92ADDAC48001A4534 /* AppViewModel.swift */; };
+		E0DBEA032AE937BF00561693 /* errorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DBEA022AE937BF00561693 /* errorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		E0BE66C52ADD897C001A4534 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		E0BE66C72ADD898E001A4534 /* GroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
 		E0BE66C92ADDAC48001A4534 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		E0DBEA022AE937BF00561693 /* errorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				E0BE668A2ADC5845001A4534 /* ContentView.swift */,
+				E0DBEA022AE937BF00561693 /* errorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				E0BE66C42ADD8937001A4534 /* ItemController.swift in Sources */,
 				E0BE668B2ADC5845001A4534 /* ContentView.swift in Sources */,
 				E0BE66BF2ADD86F1001A4534 /* User.swift in Sources */,
+				E0DBEA032AE937BF00561693 /* errorView.swift in Sources */,
 				E0BE668D2ADC5845001A4534 /* Item.swift in Sources */,
 				E0BE66CA2ADDAC48001A4534 /* AppViewModel.swift in Sources */,
 				E0BE66BD2ADD8641001A4534 /* Context.swift in Sources */,
